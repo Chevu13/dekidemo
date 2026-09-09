@@ -4,7 +4,7 @@ slug: pletho
 status: Live
 order: 2
 year: '2023'
-line: Identity and web design for a medical device firm
+line: Identity and campaign for a medical device firm
 disciplines:
   - Brand identity
   - Creative direction
