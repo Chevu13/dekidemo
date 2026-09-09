@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Work — Flatgrid Studio</title>
+<meta name="description" content="Selected work from Flatgrid Studio — branding, visual identity, web design, art direction and editorial design.">
+<meta name="theme-color" content="#141415">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/logo-mark.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap">
+
+<link rel="preload" as="image" href="{{FIRST_COVER}}" fetchpriority="high">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/work.css">
+<script>document.documentElement.className='js';try{var x=sessionStorage.getItem('fg:xfade');if(x){var c=document.documentElement.classList;c.add('is-arriving');if(x==='ink')c.add('is-ink')}}catch(e){}</script>
+</head>
+<body class="page-work">
+
+<!-- the menu's panels, held across a page change -->
+<div class="curtain" id="curtain" aria-hidden="true">
+  <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i>
+  <i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i>
+</div>
+
+<!-- the home page's six-column field -->
+<div class="grid grid--fixed" aria-hidden="true">
+  <span class="grid__rule"></span><span class="grid__rule"></span><span class="grid__rule"></span>
+  <span class="grid__rule"></span><span class="grid__rule"></span>
+</div>
+
+<a class="logo" href="index.html" aria-label="Flatgrid Studio — home">
+  <img class="logo__wordmark" src="assets/logo-wordmark.svg" alt="Flatgrid Studio" width="200" height="125">
+  <img class="logo__mark" src="assets/logo-mark-menu.svg" alt="" aria-hidden="true" width="513" height="304">
+</a>
+
+<button class="menu" type="button" id="menuBtn" aria-expanded="false" aria-controls="nav">
+  <span class="menu__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+  <span class="menu__label">
+    <span class="menu__word menu__word--open">Menu</span>
+    <span class="menu__word menu__word--close" aria-hidden="true">Close</span>
+  </span>
+</button>
+
+<!-- ─────────────────────────────  REEL  ─────────────────────────────
+     Words on the left third, photograph pinned across the right two
+     thirds. Generated from content/work/*.md by scripts/build.mjs —
+     edit the projects in /admin, not here. -->
+<main class="reel" id="reel">
+
+  <ol class="reel__list">
+{{SLIDES}}
+  </ol>
+
+  <div class="reel__col">
+    <div class="reel__stage">
+      <div class="reel__shots">
+{{SHOTS}}
+      </div>
+      <span class="reel__grain" aria-hidden="true"></span>
+      <a class="reel__link" id="reelLink" data-xfade="none" href="project-{{FIRST_SLUG}}.html" aria-label="Open {{FIRST_TITLE}}">
+        <span class="reel__go">
+          View project
+          <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true" focusable="false">
+            <path d="M5 15 15 5M6.5 5H15v8.5" fill="none" stroke="currentColor"
+                  stroke-width="1.9" stroke-linecap="square"/>
+          </svg>
+        </span>
+      </a>
+      <p class="count" aria-hidden="true"><span id="countNow">01</span><i></i><span class="count__all">{{COUNT}}</span></p>
+    </div>
+  </div>
+
+</main>
+
+<!-- ─────────────────────────────   NAV   ───────────────────────────── -->
+<nav class="nav" id="nav" aria-hidden="true" aria-label="Main">
+  <div class="nav__panels" aria-hidden="true">
+    <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i>
+    <i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i>
+  </div>
+  <div class="nav__grid" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <ul class="nav__list">
+    <li><a href="work.html" aria-current="page">Work</a></li>
+    <li><a href="studio.html">Studio</a></li>
+    <li><a href="academy.html">Flatgrid Academy</a></li>
+    <li><a href="templates.html">Design Templates</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <p class="nav__foot"><a href="mailto:flatgrid.studio@gmail.com">flatgrid.studio@gmail.com</a></p>
+</nav>
+
+<div class="cursor" id="cursor" aria-hidden="true">View project</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/work.js"></script>
+</body>
+</html>
