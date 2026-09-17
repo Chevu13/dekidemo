@@ -1,7 +1,7 @@
 ---
 title: Cro Sea Villas
 slug: cro-sea-villas
-status: Live
+status: Draft
 order: 1
 year: '2021'
 line: Brand identity for a residential development
